@@ -4,10 +4,11 @@
 import json
 import time
 import utils
+from flask_cors import CORS
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
-
+CORS(app)
 @app.route('/aStarConnection', methods=['POST'])
 def main():
 
